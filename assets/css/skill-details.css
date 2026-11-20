@@ -1,0 +1,279 @@
+/* ==========================================================================
+   CSEP SKILL DETAIL / SESSION PAGE CSS
+   Matches Screen 04: Session Details, Hosted by Mentor, Join Session Box
+   ========================================================================== */
+
+@import url('design-system.css');
+
+.back-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.back-nav-btn:hover {
+    color: var(--primary);
+    transform: translateX(-3px);
+}
+
+/* 2-Column Session Layout (Screen 04) */
+.session-detail-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Left Content Column */
+.session-main-info {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+}
+
+.session-main-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.session-badge-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: #EDE9FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.session-title-wrap h1 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.session-pills-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.session-desc-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Hosted By Mentor Card (Screen 04) */
+.mentor-hosted-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: var(--radius-lg);
+    background: #F8FAFC;
+    border: 1px solid var(--border-color);
+    margin-bottom: 28px;
+}
+
+.mentor-profile-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mentor-large-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #7C3AED, #6366F1);
+}
+
+.mentor-details-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-host-label {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mentor-name {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.mentor-branch {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.mentor-rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #F59E0B;
+    background: #FFFBEB;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid #FDE68A;
+}
+
+/* Topics Covered List */
+.session-topics-box h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.topics-curriculum-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.curriculum-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: #F8FAFC;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.curriculum-item:hover {
+    background: #FFFFFF;
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.topic-index-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #EDE9FE;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.topic-text-content h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.topic-text-content p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Right Sticky Booking Card (Screen 04) */
+.session-booking-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    box-shadow: var(--shadow-card);
+    position: sticky;
+    top: 96px;
+}
+
+.btn-join-session-wide {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 24px;
+}
+
+.session-schedule-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 22px;
+}
+
+.schedule-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.schedule-icon-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #F1F5F9;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.session-attendees-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.attendees-text-counter {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .session-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .session-booking-card {
+        position: static;
+    }
+}
+

@@ -1,149 +1,307 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Skill Exchange Platform</title>
-    <link rel="stylesheet" href="index.css">
+    <title>CodeOrbit – College Skill Exchange Platform (CSEP)</title>
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
-<body>
+<body class="landing-body">
 
-    <header>
-        <h1>College Skill Exchange Platform</h1>
+    <!-- Header Navigation (Matches Reference Photo) -->
+    <header class="landing-header">
+        
+        <!-- CodeOrbit Logo -->
+        <a href="index.html" class="codeorbit-brand">
+            <div class="orbit-icon-wrap">
+                <svg viewBox="0 0 44 44" fill="none">
+                    <!-- Orbital ellipses with arrows -->
+                    <circle cx="22" cy="22" r="18" stroke="#EDE9FE" stroke-width="2.5" />
+                    <path d="M 22,4 A 18,18 0 0 1 40,22" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+                    <polygon points="40,18 43,23 37,23" fill="#7C3AED"/>
+                    <path d="M 22,40 A 18,18 0 0 1 4,22" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+                    <polygon points="4,26 1,21 7,21" fill="#7C3AED"/>
+                    <!-- Center Code Symbol </> -->
+                    <text x="22" y="27" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="14" fill="#0F172A">&lt;/&gt;</text>
+                </svg>
+            </div>
+            <div class="codeorbit-brand-text">
+                <span class="brand-name">CodeOrbit</span>
+                <span class="brand-csep">— CSEP —</span>
+            </div>
+        </a>
 
+        <!-- Center Links (Home, Skills, Skill Match, About, Login) -->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#skills">Explore Skills</a>
-            <a href="#about">About Us</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Join Now</a>
+            <ul class="landing-nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="skill-match.html">Skill Match ✨</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
+
+        <!-- Right Action Button: Join Now -->
+        <div class="landing-nav-actions">
+            <a href="register.html" class="btn-nav-join">Join Now</a>
+        </div>
     </header>
 
     <main>
+        <!-- Hero Section (Matches Reference Photo) -->
+        <section class="hero-wrapper">
+            
+            <!-- Bottom-Left Organic Fluid Waves -->
+            <div class="hero-left-wave-decor">
+                <svg viewBox="0 0 380 220" fill="none" preserveAspectRatio="none">
+                    <path d="M 0,90 C 80,120 160,180 240,220 L 0,220 Z" fill="#EDE9FE" opacity="0.8"/>
+                    <path d="M 0,130 C 100,150 180,195 280,220 L 0,220 Z" fill="#DDD6FE" opacity="0.85"/>
+                    <path d="M 0,170 C 90,175 160,205 320,220 L 0,220 Z" fill="#C4B5FD" opacity="0.9"/>
+                </svg>
+            </div>
 
-        <section id="home">
-            <p>✦ YOUR CAMPUS, YOUR COMMUNITY</p>
+            <div class="hero-grid">
+                
+                <!-- Left Text Column -->
+                <div class="hero-left-col">
+                    <h1 class="hero-title">
+                        College Skill<br>
+                        Exchange Platform
+                    </h1>
 
-            <h1>
-                Learn Together.
-                <br>
-                Grow Together.
-            </h1>
+                    <p class="hero-tagline">
+                        Learn <span>•</span> Share <span>•</span> Collaborate
+                    </p>
 
-            <h2>Welcome to College Skill Exchange Platform</h2>
+                    <a href="register.html" class="btn-hero-cta">
+                        Get Started →
+                    </a>
+                </div>
 
-            <p>
-                Discover new skills, share your knowledge and connect
-                with talented students from your college.
-            </p>
+                <!-- Right Illustration Column (Collaborating Students on Laptop) -->
+                <div class="hero-right-col">
+                    <div class="hero-illustration-wrapper">
+                        <img src="assets/images/hero-illustration.jpg" 
+                             alt="College students learning and collaborating on code" 
+                             class="hero-illustration-img">
+                    </div>
+                </div>
 
-            <p>
-                Everyone has something to teach and something to learn.
-                Let's make learning a shared experience!
-            </p>
-
-            <a href="register.html">Get Started →</a>
-            <a href="#skills">Explore Skills</a>
-
-            <figure>
-                <img src="https://placehold.co/500x350/e9e7ff/5145cd?text=Learn+%7C+Share+%7C+Grow"
-                     alt="Students learning and sharing skills">
-                <figcaption>Connect. Collaborate. Create Opportunities.</figcaption>
-            </figure>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>What is CSEP?</h2>
+        <!-- 4-Feature Highlights Strip -->
+        <section class="features-strip-section">
+            <div class="features-strip-grid">
+                
+                <div class="feature-box-card">
+                    <div class="feature-box-icon">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div class="feature-box-text">
+                        <h4>Share Skills</h4>
+                        <p>Teach what you know</p>
+                    </div>
+                </div>
 
-            <p>
-                CSEP is a student-focused platform designed to create
-                a skill-sharing community within colleges. It helps
-                students discover talented peers, exchange knowledge
-                and learn practical skills together.
-            </p>
+                <div class="feature-box-card">
+                    <div class="feature-box-icon">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <div class="feature-box-text">
+                        <h4>Learn From Peers</h4>
+                        <p>Gain new skills</p>
+                    </div>
+                </div>
 
-            <h3>Our Mission</h3>
-            <p>
-                To make learning accessible, collaborative and
-                meaningful by connecting students through their skills.
-            </p>
+                <div class="feature-box-card">
+                    <div class="feature-box-icon">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div class="feature-box-text">
+                        <h4>Collaborate</h4>
+                        <p>Build real projects</p>
+                    </div>
+                </div>
+
+                <div class="feature-box-card">
+                    <div class="feature-box-icon">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div class="feature-box-text">
+                        <h4>Grow Together</h4>
+                        <p>Enhance your career</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Explore Skills</h2>
+        <!-- Popular Skills Catalog -->
+        <section class="landing-content-section" id="skills">
+            <div class="section-title-center">
+                <span class="section-pill-tag">Peer Learning</span>
+                <h2 class="section-heading-text">Explore Campus Skill Sessions</h2>
+                <p class="section-subtext">Join student-led study circles, hands-on workshops, and collaborative coding sessions.</p>
+            </div>
 
-            <p>Discover your interests and explore something new.</p>
+            <div class="landing-skills-grid">
+                
+                <!-- Web Development -->
+                <div class="landing-skill-card">
+                    <div class="card-top-row">
+                        <div class="card-icon-square" style="background:#EDE9FE; color:#7C3AED;">
+                            &lt;/&gt;
+                        </div>
+                        <div class="card-star-rating">★ 4.9</div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p class="card-tags-line">HTML • CSS • JavaScript • React</p>
+                    <div class="card-mentor-foot">
+                        <span class="card-mentor-name">By Priya Sharma</span>
+                        <a href="skill-details.html?skill=web-development" class="card-view-link">View Session →</a>
+                    </div>
+                </div>
 
-            <article>
-                <h3>🐍 Python Programming</h3>
-                <p>Learn coding and build programming logic.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
+                <!-- UI/UX Design -->
+                <div class="landing-skill-card">
+                    <div class="card-top-row">
+                        <div class="card-icon-square" style="background:#FDF2F8; color:#EC4899;">
+                            🎨
+                        </div>
+                        <div class="card-star-rating">★ 4.8</div>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p class="card-tags-line">Figma • Design Systems • Wireframing</p>
+                    <div class="card-mentor-foot">
+                        <span class="card-mentor-name">By Rohan Mehta</span>
+                        <a href="skill-details.html?skill=graphic-design" class="card-view-link">View Session →</a>
+                    </div>
+                </div>
 
-            <article>
-                <h3>💻 Web Development</h3>
-                <p>Create websites using HTML, CSS and JavaScript.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
+                <!-- Data Structures & Algorithms -->
+                <div class="landing-skill-card">
+                    <div class="card-top-row">
+                        <div class="card-icon-square" style="background:#F3E8FF; color:#9333EA;">
+                            ⬡
+                        </div>
+                        <div class="card-star-rating">★ 4.9</div>
+                    </div>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p class="card-tags-line">C++ • Problem Solving • LeetCode</p>
+                    <div class="card-mentor-foot">
+                        <span class="card-mentor-name">By Kunal Verma</span>
+                        <a href="skill-details.html?skill=c" class="card-view-link">View Session →</a>
+                    </div>
+                </div>
 
-            <article>
-                <h3>⚙️ C Programming</h3>
-                <p>Develop strong programming fundamentals.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
+                <!-- Machine Learning -->
+                <div class="landing-skill-card">
+                    <div class="card-top-row">
+                        <div class="card-icon-square" style="background:#ECFDF5; color:#10B981;">
+                            🤖
+                        </div>
+                        <div class="card-star-rating">★ 4.7</div>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p class="card-tags-line">Python • Scikit-Learn • Data Science</p>
+                    <div class="card-mentor-foot">
+                        <span class="card-mentor-name">By Ananya Singh</span>
+                        <a href="skill-details.html?skill=ai-ml" class="card-view-link">View Session →</a>
+                    </div>
+                </div>
 
-            <article>
-                <h3>🤖 AI & Machine Learning</h3>
-                <p>Discover intelligent technologies and innovation.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
+            </div>
 
-            <article>
-                <h3>🎨 Graphic Designing</h3>
-                <p>Express creativity through digital design.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
-
-            <article>
-                <h3>📊 Data Analytics</h3>
-                <p>Understand data and discover meaningful insights.</p>
-                <a href="skills.html">Explore Skill</a>
-            </article>
+            <div style="text-align:center; margin-top:36px;">
+                <a href="skills.html" class="btn-secondary" style="padding:12px 28px;">
+                    Explore All Skills & Sessions →
+                </a>
+            </div>
         </section>
 
-        <section>
-            <h2>How CSEP Works</h2>
-
-            <ol>
-                <li><strong>Join the Platform:</strong> Register as a student.</li>
-                <li><strong>Discover Skills:</strong> Explore different skills.</li>
-                <li><strong>Connect with Peers:</strong> Find students who share your interests.</li>
-                <li><strong>Learn & Share:</strong> Exchange knowledge and grow together.</li>
-            </ol>
+        <!-- About Section -->
+        <section class="landing-content-section" id="about" style="background:#F8FAFC; border-radius:32px;">
+            <div class="section-title-center">
+                <span class="section-pill-tag">Why CodeOrbit</span>
+                <h2 class="section-heading-text">Learn Together. Grow Together.</h2>
+                <p class="section-subtext">
+                    CodeOrbit (CSEP) connects passionate students to share practical skills, build real projects, and empower peer learning across campus.
+                </p>
+            </div>
         </section>
 
-        <section>
+        <!-- CTA Banner -->
+        <div class="landing-cta-card">
             <h2>Ready to Share What You Know?</h2>
-
-            <p>
-                Your knowledge can inspire someone.
-                Your curiosity can take you further.
-            </p>
-
-            <a href="register.html">Join the CSEP Community →</a>
-        </section>
-
+            <p>Your knowledge can inspire someone. Join 2,400+ student learners and mentors on CodeOrbit today.</p>
+            <a href="register.html" class="btn-cta-white">
+                Join the CodeOrbit Community →
+            </a>
+        </div>
     </main>
 
-    <footer>
-        <h2>CSEP.</h2>
-        <p>Learn a Skill • Share a Skill</p>
-        <p>© 2026 College Skill Exchange Platform. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="footer-main-grid">
+            <div>
+                <a href="index.html" class="codeorbit-brand" style="margin-bottom:12px;">
+                    <div class="codeorbit-brand-text">
+                        <span class="brand-name" style="color:#FFF;">CodeOrbit</span>
+                        <span class="brand-csep">— CSEP —</span>
+                    </div>
+                </a>
+                <p class="footer-desc-p">
+                    College Skill Exchange Platform — Learn Together. Grow Together. Built by students, for students.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="skills.html">Explore Skills</a></li>
+                    <li><a href="projects.html">Project Space</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Sign Up</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Campus</h4>
+                <ul>
+                    <li><a href="#about">About CSEP</a></li>
+                    <li><a href="skills.html">Study Circles</a></li>
+                    <li><a href="mailto:contact@codeorbit.edu">Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-line">
+            <span>© 2026 CodeOrbit (CSEP). All Rights Reserved.</span>
+            <span>Developed by Khushi Verma</span>
+        </div>
     </footer>
 
+    <script src="assets/js/index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>

@@ -1,0 +1,294 @@
+/* ==========================================================================
+   CODEORBIT — PEER SKILL MATCH CSS
+   Smart reciprocal matching: "I can teach X ⇄ I want to learn Y"
+   ========================================================================== */
+
+@import url('design-system.css');
+
+.match-header-banner {
+    margin-bottom: 24px;
+}
+
+.match-header-banner h1 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.match-header-banner p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+}
+
+/* Match Filter Card (Interactive Barter Selector) */
+.match-selector-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 24px 28px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 30px;
+}
+
+.match-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.match-input-group label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.match-select-box {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: #F8FAFC;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    outline: none;
+    transition: var(--transition);
+}
+
+.match-select-box:focus {
+    background: #FFFFFF;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
+.swap-arrows-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #EDE9FE;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 18px;
+    flex-shrink: 0;
+}
+
+.btn-find-matches {
+    margin-top: 20px;
+    height: 44px;
+    padding: 0 24px;
+}
+
+/* Match Filter Tabs */
+.match-status-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.match-tabs-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.match-tab-pill {
+    padding: 7px 18px;
+    border-radius: var(--radius-pill);
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.match-tab-pill.active {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+}
+
+.match-count-badge {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Match Cards Grid */
+.matches-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.peer-match-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.peer-match-card:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.peer-match-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.peer-identity-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.peer-match-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #CBD5E1;
+}
+
+.peer-name-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.peer-branch-sub {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.match-score-badge {
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 12.5px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.match-score-badge.high {
+    background: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
+}
+
+.match-score-badge.very-high {
+    background: #EDE9FE;
+    color: #6D28D9;
+    border: 1px solid #DDD6FE;
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
+}
+
+/* Reciprocal Exchange Box inside card */
+.exchange-details-box {
+    background: #F8FAFC;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exchange-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.exchange-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.exchange-skill-tag {
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+}
+
+.tag-teaches {
+    background: #EDE9FE;
+    color: var(--primary);
+}
+
+.tag-learns {
+    background: #E0F2FE;
+    color: #0284C7;
+}
+
+.peer-match-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.peer-match-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-swap-connect {
+    flex: 1;
+    padding: 10px;
+    font-size: 13.5px;
+    border-radius: var(--radius-pill);
+}
+
+@media (max-width: 960px) {
+    .match-inputs-grid {
+        grid-template-columns: 1fr;
+    }
+    .swap-arrows-icon {
+        display: none;
+    }
+    .matches-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

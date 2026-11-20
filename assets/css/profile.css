@@ -1,0 +1,210 @@
+/* ==========================================================================
+   CSEP STUDENT PROFILE CSS
+   Matches Screen 05: Avatar, Verified Badge, Bio, 4 Stats, Tabs, Skill Chips
+   ========================================================================== */
+
+@import url('design-system.css');
+
+.profile-card-main {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 32px 36px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 28px;
+}
+
+.profile-hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-identity-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile-avatar-wrapper {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #7C3AED, #6366F1);
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+
+.profile-verified-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #3B82F6;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.profile-info-text h1 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.profile-college-tag {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.profile-bio-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 580px;
+}
+
+.profile-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 4 Profile Stats Row (Screen 05) */
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.profile-stat-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.profile-stat-number {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.profile-stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Tabs Navigation (Screen 05) */
+.profile-tabs-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 24px;
+    padding-left: 8px;
+}
+
+.profile-tab-item {
+    padding: 12px 4px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.profile-tab-item:hover {
+    color: var(--primary);
+}
+
+.profile-tab-item.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+/* Skills Chips Row (Screen 05) */
+.skills-pills-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profile-skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: var(--radius-pill);
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.profile-skill-chip:hover {
+    border-color: var(--accent-light);
+    color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.1);
+}
+
+.profile-skill-chip .chip-symbol {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.profile-skill-chip .chip-arrow {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-hero-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-identity-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

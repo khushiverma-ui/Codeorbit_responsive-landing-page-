@@ -1,0 +1,23 @@
+{
+  "name": "codeorbit-csep",
+  "version": "1.0.0",
+  "description": "CodeOrbit – College Skill Exchange Platform (CSEP)",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 5500",
+    "serve": "npx serve . -p 5500",
+    "firebase:login": "npx firebase login",
+    "firebase:deploy": "npx firebase deploy",
+    "deploy": "npx firebase deploy --only hosting"
+  },
+  "keywords": [
+    "csep",
+    "codeorbit",
+    "skill-exchange",
+    "peer-learning",
+    "firebase-auth",
+    "firestore"
+  ],
+  "author": "Khushi Verma",
+  "license": "MIT"
+}

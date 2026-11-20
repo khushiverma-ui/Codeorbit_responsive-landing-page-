@@ -1,0 +1,358 @@
+/* ==========================================================================
+   CSEP STUDENT DASHBOARD CSS
+   Matches Screen 02: Stats Cards, Upcoming Sessions, Progress Bar
+   ========================================================================== */
+
+@import url('design-system.css');
+
+/* Dashboard Welcome Header */
+.dashboard-head-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.welcome-text h1 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.welcome-text p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+}
+
+/* 4 Stats Cards Row (Screen 02) */
+.dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.dash-stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 22px 24px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.dash-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.dash-stat-card.featured-stat {
+    background: linear-gradient(135deg, #7C3AED 0%, #6366F1 100%);
+    border-color: #7C3AED;
+    color: #FFFFFF;
+    box-shadow: 0 10px 24px -4px rgba(124, 58, 237, 0.4);
+}
+
+.dash-stat-card .stat-number {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.dash-stat-card.featured-stat .stat-number {
+    color: #FFFFFF;
+}
+
+.dash-stat-card .stat-label {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.dash-stat-card.featured-stat .stat-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dashboard Content Sections */
+.dashboard-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+/* Upcoming Session Card (Screen 02) */
+.session-item-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.session-item-card:hover {
+    border-color: rgba(124, 58, 237, 0.35);
+    box-shadow: var(--shadow-hover);
+}
+
+.session-info-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.session-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #EDE9FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.session-icon-box svg {
+    width: 24px;
+    height: 24px;
+}
+
+.session-text-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.session-meta-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.session-attendees-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Avatars Stack */
+.avatar-stack {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-stack-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    margin-left: -8px;
+    object-fit: cover;
+    background: #CBD5E1;
+}
+
+.avatar-stack-img:first-child {
+    margin-left: 0;
+}
+
+.avatar-stack-more {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    margin-left: -8px;
+    background: #EDE9FE;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Learning Progress Card (Screen 02) */
+.progress-container-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    box-shadow: var(--shadow-card);
+}
+
+.progress-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Circular Progress Visual */
+.circle-progress-wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.circle-progress-wrap svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #E2E8F0;
+    stroke-width: 7;
+}
+
+.circle-stroke {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-dasharray: 219.9;
+    stroke-dashoffset: 72.5; /* approx 67% */
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.circle-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.progress-info-details {
+    flex: 1;
+}
+
+.progress-info-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.progress-info-details p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.progress-bar-track {
+    width: 100%;
+    height: 8px;
+    background: #EDE9FE;
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 67%;
+    background: linear-gradient(90deg, #7C3AED, #6366F1);
+    border-radius: var(--radius-pill);
+}
+
+/* Quick Explore Grid */
+.dashboard-grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.quick-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.quick-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.quick-card-head h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.quick-card-head a {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.quick-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    background: #F8FAFC;
+    border: 1px solid var(--border-color);
+    font-size: 13.5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dashboard-grid-two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .session-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .session-attendees-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
