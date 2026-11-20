@@ -1,0 +1,10 @@
+# Netlify configuration for CodeOrbit (CSEP)
+[build]
+  publish = "."
+
+# Serve existing files directly, and fall back to index.html for unknown routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
